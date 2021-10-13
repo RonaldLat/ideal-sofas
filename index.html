@@ -8,11 +8,11 @@
   <title>Ideal Sofas</title>
 </head>
 
-<body x-data="{show: true}" class="relative w-full ">
+<body x-data="{show: true}" class="box-border relative w-screen overflow-x-hidden">
 
-  <div class="fixed top-0 left-0 z-50 w-full px-5 py-5 bg-gray-300 ">
-    <div class="relative flex items-center justify-between ">
-      <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+  <div class="fixed top-0 left-0 z-50 w-screen max-w-full px-1 py-3 bg-gray-300 md:py-5 md:px-5">
+    <div class="flex items-center justify-between md:justify-around ">
+      <a href="/" aria-label="Company" title="Company" class="inline-flex items-center md:mr-8">
         <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2"
           stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
           <rect x="3" y="1" width="7" height="12"></rect>
@@ -22,7 +22,7 @@
         </svg>
         <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Ideal Sofas</span>
       </a>
-      <ul class="items-center hidden space-x-8 md:flex lg:flex">
+      <ul class="hidden gap-3 space-x-8 md:items-center md:flex">
         <li><a href="/" aria-label="Our product" title="Our product"
             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-yellow-500">Catalog</a>
         </li>
@@ -44,8 +44,8 @@
         </li>
       </ul>
       <!-- Mobile menu -->
-      <div @click="show = !show" class=" md:hidden">
-        <button aria-label="Open Menu" title="Open Menu"
+      <div>
+        <button @click="show = !show" aria-label="Open Menu" title="Open Menu"
           class="p-2 -mr-1 transition duration-200 rounded md:hidden focus:outline-none focus:shadow-outline hover:bg-yellow-500">
           <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
             <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
@@ -54,7 +54,7 @@
           </svg>
         </button>
         <!-- Mobile menu dropdown  -->
-        <div class="fixed top-0 left-0 w-full transition-all duration-500 ease-in-out transform bg-yellow-100"
+        <div class="fixed top-0 left-0 w-screen transition-all duration-500 ease-in-out transform bg-yellow-100"
           :class="{'-translate-y-full': show, '-translate-y-0': !show}">
           <div class="p-5 border rounded shadow-sm">
             <div class="flex items-center justify-between mb-4">
@@ -71,7 +71,7 @@
                 </a>
               </div>
               <div>
-                <button aria-label="Close Menu" title="Close Menu"
+                <button @click="show = !show" aria-label="Close Menu" title="Close Menu"
                   class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                   <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -99,7 +99,7 @@
                   <a href="/"
                     class="inline-flex items-center justify-center w-3/4 h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-yellow-500 rounded shadow-md hover:bg-yellow-600 focus:shadow-outline focus:outline-none"
                     aria-label="Sign up" title="Sign up">
-                    Sign up
+                    Contact us
                   </a>
                 </li>
               </ul>
@@ -113,8 +113,8 @@
 
   <!-- home section -->
 
-  <section class="flex items-center justify-center w-screen min-h-screen m-auto text-gray-600 bg-gray-300 ">
-    <div class="flex flex-col items-center justify-center w-full h-full px-5 py-0 gap-9 md:flex-row">
+  <section class="box-border flex items-center justify-center w-full min-h-screen m-auto text-gray-600 bg-gray-300 ">
+    <div class="flex flex-col items-center justify-around w-full h-full px-5 py-0 gap-9 md:flex-row">
 
       <div class="container w-full my-8 md:w-3/6 sm:w-11/12 h-xl swiper">
         <div class="w-full h-full mx-auto swiper-wrapper">
@@ -142,7 +142,7 @@
         <!-- <div class="text-red-500 swiper-button-prev"></div>
         <div class="text-red-500 swiper-button-next"></div> -->
       </div>
-      <div class="w-full px-6 py-2 text-center bg-yellow-100 rounded-md shadow-sm md:w-2/6 lg:w-2/3">
+      <div class="box-border w-full px-6 py-2 text-center bg-yellow-100 rounded-md shadow-md md:max-w-sm md:w-2/6 lg:w-2/3 md:mr-8">
         <h1 class="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl">Ideal Sofas</h1>
         <p class="mb-8 leading-relaxed">Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing tousled.
           Chambray dreamcatcher trust fund, kitsch vice godard disrupt ramps hexagon mustache umami snackwave tilde
@@ -160,7 +160,7 @@
 
   <!-- stats -->
   <section class="container py-2 mx-auto my-4 text-gray-600 rounded bg-yellow-50 body-font min-h-96">
-    <div class="flex flex-wrap w-full px-5 md:flex-nowrap">
+    <div class="flex flex-wrap w-full px-5 mx-auto md:flex-nowrap">
       <div class="flex flex-wrap content-start h-full lg:w-2/6 md:w-3/6">
         <div class="w-full px-4 mb-6 sm:p-4">
           <h1 class="mb-2 text-xl font-medium text-gray-900 title-font">Moon hashtag pop-up try-hard offal truffaut</h1>
@@ -199,10 +199,10 @@
       <div class="flex flex-wrap -m-4">
 
         <template x-for="product in $store.products">
-          <div class="w-full p-4 lg:w-1/4 md:w-1/2">
+          <div class="w-full p-4 shadow-md lg:w-1/4 md:w-1/2">
             <a class="relative block h-48 overflow-hidden rounded">
               <img alt="ecommerce" class="block object-cover object-center w-full h-full"
-                :src="`./images/${product.img}`">
+                :src="`/images/${product.img}`">
             </a>
             <div class="mt-4">
               <h3 x-text="product.category" class="mb-1 text-xs tracking-widest text-gray-500 title-font"></h3>
@@ -254,7 +254,7 @@
           </div>
           <div class="w-full p-2 pt-8 mt-8 text-center border-t border-gray-200">
             <a class="text-yellow-500">contact@idealsofas.com</a>
-            <p class="my-5 leading-normal">49 Smith St.
+            <p class="my-5 leading-normal">Oginga Odinga St.
               <br>Kisumu CBD, MN 56301
             </p>
             <span class="inline-flex">
@@ -294,7 +294,7 @@
     </div>
   </section>
 
-  <footer class="text-gray-600 body-font">
+  <footer class="w-full text-gray-600 body-font">
     <div class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row">
       <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
@@ -331,7 +331,7 @@
             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
           </svg>
         </a>
-        <a class="ml-3 text-gray-500">
+        <a class="ml-3 text-gray-500 hover:text-yellow-400">
           <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
             class="w-5 h-5" viewBox="0 0 24 24">
             <path stroke="none"
