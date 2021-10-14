@@ -2,37 +2,43 @@ let sofas = [
     {
         name: 'Green Sofa',
         price: 23000,
-        img: 'green-round.jpg',
+        oldPrice: 25000,
+        img: 'sofa11.jpg',
         category: 'CATEGORY'
     },
     {
         name: 'Maroon Sofa',
         price: 33000,
-        img: 'maroon.jpg',
+        oldPrice: 25000,
+        img: 'sofa12.jpg',
         category: 'CATEGORY'
     },
     {
         name: 'Jungle Green Sofa',
         price: 33000,
+        oldPrice: 25000,
         img: 'jungle.jpg',
         category: 'CATEGORY'
     },
     {
         name: 'Yellow Sofa',
         price: 33000,
-        img: 'yellow.jpg',
+        oldPrice: 25000,
+        img: 'sofa14.jpg',
         category: 'CATEGORY'
     },
     {
         name: 'Wide Sofa',
         price: 33000,
+        oldPrice: 25000,
         img: 'wide.jpg',
         category: 'CATEGORY'
     },
     {
-        name: 'Whitish Sofa',
+        name: 'Brownish Sofa',
         price: 33070,
-        img: 'white.jpg',
+        oldPrice: 25000,
+        img: 'sofa15.jpg',
         category: 'CATEGORY'
     },
 ]
