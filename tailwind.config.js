@@ -4,12 +4,16 @@ module.exports = {
     './index.html',
     './main.js'
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
+ 
     extend: {
       height: {
         xl: '50vh'
-      }
+      },
+      screen: {
+        xs: '420px'
+      },
     },
   },
   variants: {
