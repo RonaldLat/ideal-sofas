@@ -4,7 +4,10 @@ module.exports = {
     './index.html',
     './main.js'
   ],
+
   darkMode: 'class', // or 'media' or 'class'
+
+
   theme: {
  
     extend: {
