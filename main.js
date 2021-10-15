@@ -43,10 +43,10 @@ const swiper = new Swiper('.swiper',{
     //     slideShadows: true,
     // },
     // direction: 'vertical',
-    pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true
-    },
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     dynamicBullets: true
+    // },
     // breakpoints:{
     //     320: {
     //         // slidesPerView: 2,
